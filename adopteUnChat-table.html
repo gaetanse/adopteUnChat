@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Adopte un chat</title>
+        <style> @import url("css/adopteUnChat-table.css"); </style>
+    </head>
+    <body>
+        <video autoplay muted loop id="myVideo">
+            <source src="img/Maine%20Coon%20Cat.mp4" type="video/mp4">
+        </video>
+        <header class="background">
+            <h1>Adopte un chat /</h1>
+            <h3>Tableau pour voir les informations</h3>
+        </header>
+        <nav class="background">
+            <hr>
+            <a href="adopteUnChat-home.html">Accueil</a>
+            <a href="adopteUnChat-table.html">Tableau</a>
+            <a href="adopteUnChat-contact.html">Formulaire</a>
+            <hr>
+        </nav>
+        <script>
+            fetch('json/cats.json').then((r)=>{ return r.text(); }).then((data)=>{
+                const FILEJSON = JSON.parse(data).pets;
+                console.log(JSON.parse(data).pets);
+                const TABLE = document.createElement('table');
+                const TRDEFAULT = document.createElement('tr');
+                TRDEFAULT.innerHTML= `
+                    <tr>
+                        <td>Race</td>
+                        <td>Photo</td>
+                        <td>Description</td>
+                    </tr>`;
+                TABLE.appendChild(TRDEFAULT);
+                for (let i = 0; i < FILEJSON.length; i++) {
+                    const TR = document.createElement('tr');
+                    // `<h3>${FILEJSON[i]["species"]}</h3>`
+                    TR.innerHTML= `
+                    <tr>
+                        <td>${FILEJSON[i]["species"]}</td>
+                        <td><img src="${FILEJSON[i]["photo"]}" width="300" height="300"/></td>
+                        <td>${FILEJSON[i]["description"]}</td>
+                    </tr>
+                    `;
+                    TABLE.appendChild(TR);
+                }
+                TABLE.className='background';
+                document.body.appendChild(TABLE);
+            });
+        </script>
+    </body>
+</html>

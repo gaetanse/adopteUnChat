@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style> @import url("css/adopteUnChat-home.css"); </style>
+        <!--        <script type="text/javascript" src="data.json"></script>-->
+    </head>
+    <body>
+
+        <video autoplay muted loop id="myVideo">
+            <source src="img/Maine%20Coon%20Cat.mp4" type="video/mp4">
+        </video>
+        <header class="background">
+            <h1>Adopte un chat /</h1>
+            <h3>Accueil pour voir les chats</h3>
+        </header>
+        <nav class="background">
+            <hr>
+            <a href="adopteUnChat-home.html">Accueil</a>
+            <a href="adopteUnChat-table.html">Tableau</a>
+            <a href="adopteUnChat-contact.html">Formulaire</a>
+            <hr>
+        </nav>
+        <script>
+            fetch('json/cats.json').then((r)=>{ return r.text(); }).then((data)=>{
+                const FILEJSON = JSON.parse(data).pets;
+                console.log(JSON.parse(data).pets);
+                for (let i = 0; i < FILEJSON.length; i++) {
+
+                    const ARTICLE = document.createElement('article');
+                    ARTICLE.innerHTML=
+                        `<h1><u>${FILEJSON[i]["species"]}</u></h1><br><br>
+                         <img src="${FILEJSON[i]["photo"]}"/>
+                         <p>${FILEJSON[i]["description"]}</p>`;
+                    const BALISE = document.createElement('div');
+                    BALISE.innerHTML = `<section class="background">
+                        <img class="img-cat" src="img/cat.png" alt="cat"/>
+                    </section>
+                    <section class="background">
+                        <img class="img-cat" src="img/cat.png" alt="cat"/>
+                    </section>
+                    <section class="background">
+                        <img class="img-cat" src="img/cat.png" alt="cat"/>
+                    </section>`;
+                    ARTICLE.className='background';
+                    document.body.appendChild(ARTICLE);
+                    document.body.appendChild(BALISE);
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "pets": [
+    {
+      "species" : "maine coon",
+      "description" : "Le Maine coon est une race de chat à poil mi-long originaire de l'État du Maine aux États-Unis. Ce chat au physique rustique est caractérisé par sa grande taille, sa queue en panache, son museau carré, ses oreilles à plumets et son poil long. Il est à ce jour l'une des plus grandes races de chat domestique, avec le savannah, une race originaire des États-Unis issue du croisement avec le serval, un félin sauvage africain. Le Maine coon est également la plus ancienne race naturelle nord-américaine.",
+      "photo" : "https://upload.wikimedia.org/wikipedia/commons/f/fd/Maincoooons.png"
+    },
+    {
+      "species" : "persan",
+      "description" : "Le persan est une race de chats à poil long. Ce chat de taille moyenne à grande est caractérisé par son poil long et abondant, sa silhouette toute en rondeur et son visage au museau très court. Reconnue depuis la fin du xixe siècle, la race est d'abord modifiée par les Britanniques, puis essentiellement aux États-Unis après la Seconde Guerre mondiale.",
+      "photo" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Chocolate_Persian.jpg/250px-Chocolate_Persian.jpg"
+    },
+    {
+      "species" : "bengal",
+      "description" : "Le bengal est une race de chat originaire des États-Unis. Cette race de taille moyenne à grande, par rapport aux autres chats, se caractérise par sa fourrure ressemblant à celle du Chat léopard du Bengale, une espèce de chat sauvage dont il est issu, par croisement avec des chats domestiques. Le bengal a une durée de vie entre douze et seize ans.",
+      "photo" : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Kattiklaanin_Luke_Catwalker_-_BEN_n_22_31.JPG/592px-Kattiklaanin_Luke_Catwalker_-_BEN_n_22_31.JPG"
+    },
+    {
+      "species" : "savannah",
+      "description" : "Le Savannah est une race de chats, créée aux États-Unis vers 1986. Ce chat de grande taille résulte du croisement entre un serval mâle ou femelle et un chat domestique.",
+      "photo" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Savannah_Cat_portrait.jpg/250px-Savannah_Cat_portrait.jpg"
+    }
+  ]
+}
